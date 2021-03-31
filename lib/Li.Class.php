@@ -1,22 +1,16 @@
 <?php
 
-class Li
-{
-    private $text;
-    private $class;
+class Li {
 
-    public function __construct($text, $class)
-    {
-        $this->text = $text;
-        $this->class = $class;
+    private $sClass;
+    private $sConteudo;
+    
+    public function __construct($sClass,$sConteudo) {
+        $this->sClass = $sClass;
+        $this->sConteudo = $sConteudo;
     }
 
-    public function getLi(){
-        return '<li class="'.$this->class.'">'.$this->text.'</li>';
-    }
-
-    public function __toString()
-    {
-        return '<li class="'.$this->class.'">'.$this->text.'</li>';
+    public function __toString() {
+        return '<li class="'.$this->sClass.'">'.$this->sConteudo."</li>\n";
     }
 }
