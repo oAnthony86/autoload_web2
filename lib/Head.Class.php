@@ -4,9 +4,9 @@ class Head
 {
     private $props = array();
 
-    public function addProp($array) 
+    public function addProp(...$array) 
     {
-        $this->props[] = $array;
+        $this->props = array_merge($this->props, $array);
     }
 
     public function __toString()

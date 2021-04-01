@@ -5,14 +5,15 @@ class Div
     private $props = array();
     private $class;
 
-    public function __construct($class = '')
+    public function __construct($class = '', ...$array)
     {
         $this->class = $class;
+        $this->props = array_merge($this->props, $array);
     }
 
-    public function addProp($array) 
+    public function addProp(...$array) 
     {
-        $this->props[] = $array;
+        $this->props = array_merge($this->props, $array);
     }
 
     public function __toString()
